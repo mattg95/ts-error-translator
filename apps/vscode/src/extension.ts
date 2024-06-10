@@ -229,14 +229,22 @@ export async function activate(context: vscode.ExtensionContext) {
           if (!thisTip) {
             return '';
           }
+          const linkText = thisTip.link
+            ? `[Learn More (${
+                thisTip.link.url.startsWith('https://www.totaltypescript.com')
+                  ? 'Book'
+                  : 'Docs'
+              })](${thisTip.link.url})`
+            : '';
+
+          const markAsLearnedText = `[Mark as Learned](command:ts-error-translator.dont-show-again?${encodeURIComponent(
+            JSON.stringify({ tip: itemInRange.type }),
+          )})`;
+
           const mdString = new vscode.MarkdownString(
             `**${thisTip.name}**\n\n${
               thisTip.message ? `${thisTip.message}\n\n` : ''
-            }${
-              thisTip.link ? `[Learn More](${thisTip.link}) |` : ''
-            } [Mark as Learned](command:ts-error-translator.dont-show-again?${encodeURIComponent(
-              JSON.stringify({ tip: itemInRange.type }),
-            )})`,
+            }${[linkText, markAsLearnedText].join(' | ')}`,
           );
 
           mdString.isTrusted = true;

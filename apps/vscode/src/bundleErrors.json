@@ -19,6 +19,10 @@
     "body": "A parameter in a function that starts with `...` must be the last one in the list.\n",
     "code": "1014"
   },
+  "1015": {
+    "body": "You can use a question mark or an default value, but not both at once.\n",
+    "code": "1015"
+  },
   "1091": {
     "body": "You can only create a single variable in a 'for...in' statement\n",
     "code": "1091"
@@ -43,17 +47,41 @@
     "body": "You have set the 'isolatedModules' flag. Therefore all implementation files must be modules (which means it has some form of import/export). Add an import, export, or an empty 'export {}' statement to make it a module.\n",
     "code": "1208"
   },
+  "1240": {
+    "body": "You can't use a decorator on an expression, like an arrow function.\n",
+    "code": "1240"
+  },
+  "1254": {
+    "body": "You can't use runtime code in a declaration file.\n",
+    "code": "1254"
+  },
+  "1268": {
+    "body": "Objects in TypeScript (and JavaScript!) can only have strings, numbers or symbols as keys. [Template literal types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) are a way of constructing strings.\n",
+    "code": "1268"
+  },
   "1313": {
     "body": "An if statement shouldn't be empty\n",
     "code": "1313"
+  },
+  "1434": {
+    "body": "There's a syntax error in your code, so I can't tell exactly what's wrong.\n",
+    "code": "1434"
   },
   "2304": {
     "body": "I can't find the variable you're trying to access.\n",
     "code": "2304"
   },
+  "2305": {
+    "body": "'{1}' is not one of the things exported from '{0}'.\n",
+    "code": "2305"
+  },
   "2307": {
     "body": "This could be one of two things - either '{0}' doesn't exist on your file system, or I can't find any type declarations for it.\n",
     "code": "2307"
+  },
+  "2312": {
+    "body": "You might be trying to use an interface to extend a union type. This isn't possible.\n",
+    "code": "2312"
   },
   "2314": {
     "body": "It looks like '{0}' requires '{1}' type arguments, which means you need to pass them in via a generic.\n",
@@ -103,6 +131,10 @@
     "body": "You set the function return type but it is not returning anything.\n",
     "code": "2355"
   },
+  "2365": {
+    "body": "You can't use '{0}' on the types '{1}' and '{2}'.\n",
+    "code": "2365"
+  },
   "2393": {
     "body": "You've already declared a function with the same name.\n",
     "code": "2393"
@@ -114,6 +146,10 @@
   "2451": {
     "body": "'{0}' has already been declared - you can't declare it again. [Learn more](https://www.totaltypescript.com/cannot-redeclare-block-scoped-variable).\n",
     "code": "2451"
+  },
+  "2488": {
+    "body": "Type '{0}' isn't iterable. To make it iterable, add a [`Symbol.iterator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) key.\n",
+    "code": "2488"
   },
   "2551": {
     "body": "You're trying to access '{0}' on an object that doesn't contain it. Did you mean '{2}'?\n",
@@ -127,6 +163,10 @@
     "body": "The function you're trying to call needs {0} arguments, but you're passing {1}.\n",
     "code": "2554"
   },
+  "2556": {
+    "body": "You're spreading arguments into a function. To do that, either the argument needs to be a tuple OR the function needs to accept a dynamic number of arguments.\n",
+    "code": "2556"
+  },
   "2571": {
     "body": "I don't know what type this object is, so I've defaulted it to 'unknown'. [Learn more](https://www.totaltypescript.com/concepts/object-is-of-type-unknown).\n",
     "code": "2571"
@@ -134,6 +174,26 @@
   "2590": {
     "body": "You've created a union type that's too complex for me to handle! 🤯 I can only represent 100,000 combinations in the same union, and you've gone over that limit.\n",
     "code": "2590"
+  },
+  "2604": {
+    "body": "'{0}' cannot be used as a JSX component because it isn't a function.\n",
+    "code": "2604"
+  },
+  "2614": {
+    "body": "'{1}' is not one of the things exported from '{0}'. Did you mean to import '{1}' from '{0}' instead?\n",
+    "code": "2614"
+  },
+  "2686": {
+    "body": "You might not have configured `jsx` in your `tsconfig.json` correctly. [Learn more](https://www.totaltypescript.com/react-refers-to-a-umd-global).\n",
+    "code": "2686"
+  },
+  "2722": {
+    "body": "This function might be undefined. You'll need to check it's defined before calling it.\n",
+    "code": "2722"
+  },
+  "2739": {
+    "body": "'{0}' is missing some required properties from type '{1}': {2}.\n",
+    "code": "2739"
   },
   "2741": {
     "body": "You haven't passed all the required properties to '{2}' - '{1}' is missing the '{0}' property.\n",
@@ -146,6 +206,10 @@
   "2761": {
     "body": "Type '{0}' is not a class.\n",
     "code": "2761"
+  },
+  "2775": {
+    "body": "You might be using an `asserts` keyword on an arrow function. If you are, change the function to use the `function` keyword.\n",
+    "code": "2775"
   },
   "2783": {
     "body": "'{0}' will be overwritten by the spread.\n",
@@ -163,9 +227,21 @@
     "body": "You can't import `.jsx` or `.tsx` files until you set `jsx` in your `tsconfig.json`.\n",
     "code": "6142"
   },
+  "6244": {
+    "body": "You can't use const enums when `isolatedModules` is enabled.\n",
+    "code": "6244"
+  },
   "7006": {
     "body": "I don't know what type '{0}' is supposed to be, so I've defaulted it to '{1}'. Your `tsconfig.json` file says I should throw an error here. [Learn more](https://www.totaltypescript.com/tutorials/beginners-typescript/beginner-s-typescript-section/implicit-any-type-error).\n",
     "code": "7006"
+  },
+  "7026": {
+    "body": "`JSX.IntrinsicElements` has not been declared in the global scope. [Learn more](https://www.totaltypescript.com/what-is-jsx-intrinsicelements).\n",
+    "code": "7026"
+  },
+  "7053": {
+    "body": "You can't use '{0}' to index into '{1}'. [This article](https://www.totaltypescript.com/concepts/type-string-cannot-be-used-to-index-type) might help.\n",
+    "code": "7053"
   },
   "7057": {
     "body": "I don't know enough about your generator function's return type to safely infer here.\n",
